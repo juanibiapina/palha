@@ -12,7 +12,8 @@
     "test": "jest",
     "typecheck": "flow check",
     "build": "babel src --out-dir dist",
-    "prepublish": "npm run clean && npm run test && npm run lint && npm run typecheck && npm run build"
+    "flow-copy-sources": "flow-copy-source src dist",
+    "prepublish": "npm run clean && npm run test && npm run lint && npm run typecheck && npm run build && npm run flow-copy-sources"
   },
   "author": "Juan Ibiapina <juanibiapina@gmail.com>",
   "license": "MIT",
@@ -27,6 +28,7 @@
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-jsx-a11y": "^5.1.1",
     "eslint-plugin-react": "^7.2.0",
+    "flow-copy-source": "^1.2.0",
     "jest": "^20.0.4",
     "rimraf": "^2.6.1"
   },
