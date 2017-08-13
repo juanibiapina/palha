@@ -1,13 +1,13 @@
 // @flow
 
-type UpdateFn<Model, Message> = (Model, Message) => Model;
-type ViewFn<Model, Message, View> = (Model, DispatchFn<Message>) => View;
+export type UpdateFn<Model, Message> = (Model, Message) => Model;
+export type ViewFn<Model, Message, View> = (Model, DispatchFn<Message>) => View;
 
-type RendererFn<View> = (View) => void;
+export type RendererFn<View> = (View) => void;
 
-type DispatchFn<Message> = (Message) => void;
+export type DispatchFn<Message> = (Message) => void;
 
-type Parts<Model, Message, View> = {
+export type Parts<Model, Message, View> = {
   initialModel: Model,
   update: UpdateFn<Model, Message>,
   view: ViewFn<Model, Message, View>,
